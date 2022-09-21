@@ -1,0 +1,147 @@
+body.lock {
+    overflow: hidden;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all ease 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup-content {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.popup-body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.popup-content {
+    position: relative;
+    width: 800px;
+    background-color: #e3e4ff;
+    color: #200d40;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all ease 0.3s;
+}
+
+.popup-content h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100%;
+}
+
+.popup-content p {
+    font-size: 16px;
+}
+
+.popup-content .comment {
+    margin-bottom: 15px;
+}
+
+.popup-content .input-popup {
+    width: 240px;
+}
+
+.popup-content input[type="submit"] {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border: none;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #200d40;
+    color: #ffffff;
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+    transition: all ease 0.2s;
+}
+
+.bottom-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icons/close.png");
+    background-size: cover;
+    transition: all ease 0.3s;
+}
+
+.popup-close:hover {
+    opacity: 0.5;
+}
+
+.popup-delete {
+    width: 500px;
+    text-align: center;
+}
+
+.popup-content h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.popup-content .button-form {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+.popup-message {
+    width: 500px;
+    text-align: center;
+}
+
+.popup-message p {
+    margin-top: 50px;
+    line-height: 150%;
+}
+
+#popup_add_topic .input__wrapper {
+    margin-top: 20px;
+}
+
+.add-article > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.add-article textarea {
+    resize: vertical;
+    min-height: 300px;
+}
